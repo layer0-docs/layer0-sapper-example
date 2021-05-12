@@ -5,6 +5,7 @@
     "layer0:build": "layer0 build",
     "layer0:deploy": "layer0 deploy layer0-docs",
     "dev": "sapper dev",
+    "prebuild": "node ./prebuild.js",
     "build": "sapper build",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build"

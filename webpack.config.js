@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { join } = require('path');
 const webpack = require('webpack');
 const WebpackModules = require('webpack-modules');
 const path = require('path');
@@ -22,7 +21,7 @@ const preprocess = sveltePreprocess({
 });
 
 const BUILD_ID = new Date().getTime();
-fs.writeFileSync('BUILD_ID', String(BUILD_ID));
+fs.writeFileSync('BUILD_ID.txt', String(BUILD_ID));
 
 module.exports = {
   client: {

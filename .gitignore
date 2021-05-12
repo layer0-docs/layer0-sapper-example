@@ -5,5 +5,4 @@ yarn-error.log
 /__sapper__/
 # layer0 generated build directory
 .layer0
-# Layer0 generated build directory
-.layer0
+BUILD_ID*
