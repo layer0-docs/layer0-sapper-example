@@ -1,28 +1,28 @@
-const fs = require('fs')
-const { join } = require('path')
-const webpack = require('webpack')
-const WebpackModules = require('webpack-modules')
-const path = require('path')
-const config = require('sapper/config/webpack.js')
-const sveltePreprocess = require('svelte-preprocess')
+const fs = require('fs');
+const { join } = require('path');
+const webpack = require('webpack');
+const WebpackModules = require('webpack-modules');
+const path = require('path');
+const config = require('sapper/config/webpack.js');
+const sveltePreprocess = require('svelte-preprocess');
 
-const mode = process.env.NODE_ENV
-const dev = mode === 'development'
+const mode = process.env.NODE_ENV;
+const dev = mode === 'development';
 
-const alias = { svelte: path.resolve('node_modules', 'svelte') }
-const extensions = ['.mjs', '.js', '.json', '.svelte', '.html']
-const mainFields = ['svelte', 'module', 'browser', 'main']
+const alias = { svelte: path.resolve('node_modules', 'svelte') };
+const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
+const mainFields = ['svelte', 'module', 'browser', 'main'];
 const fileLoaderRule = {
   test: /\.(png|jpe?g|gif)$/i,
   use: ['file-loader'],
-}
+};
 
 const preprocess = sveltePreprocess({
   postcss: true,
-})
+});
 
-const BUILD_ID = new Date().getTime()
-fs.writeFileSync('BUILD_ID', BUILD_ID)
+const BUILD_ID = new Date().getTime();
+fs.writeFileSync('BUILD_ID', String(BUILD_ID));
 
 module.exports = {
   client: {
@@ -95,4 +95,4 @@ module.exports = {
     output: config.serviceworker.output(),
     mode,
   },
-}
+};
