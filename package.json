@@ -9,7 +9,8 @@
     "prebuild": "node ./prebuild.js",
     "build": "sapper build",
     "export": "sapper export --legacy",
-    "start": "node __sapper__/build"
+    "start": "node __sapper__/build",
+    "format": "prettier --write '**/*' --ignore-unknown"
   },
   "version": "0.0.1",
   "name": "layer0-sapper-example",
@@ -40,12 +41,13 @@
     "postcss-load-config": "^3.0.0",
     "postcss-nested": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.5.0",
     "raw-loader": "^4.0.2",
     "sapper": "^0.28.0",
     "svelte": "^3.17.3",
     "svelte-loader": "^2.9.0",
     "svelte-preprocess": "^4.5.2",
-    "tailwindcss": "^1.9.6",
+    "tailwindcss": "^2.2.19",
     "webpack": "^4.7.0",
     "webpack-modules": "^1.0.0"
   }
