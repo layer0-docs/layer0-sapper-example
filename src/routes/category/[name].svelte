@@ -15,26 +15,23 @@
   export let products = []
 </script>
 
-<div class="container center">
-  <div class="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="flex flex-col items-center">
+  <div class="mt-10 grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {#each products as product}
-      <div>
+      <a href={product.href}>
         <Prefetch url={getApiPath(product.href)}>
-          <a href={product.href}>
-            <div class="relative">
-              <div
-                data-image-src={product.picture}
-                class="pb-2/3 bg-contain bg-center bg-no-repeat h-48"
-                style="background-image: url({product.picture})" />
-              <div class="w-full text-left lowercase font-bold">{product.name}</div>
-              <div class="w-full text-left">
-                <Rating value={product.rating} />
-              </div>
-              <div class="w-full text-left">${product.price}</div>
-            </div>
-          </a>
+          <div class="relative flex flex-col items-center">
+            <div
+              data-image-src={product.picture}
+              class="pb-2/3 bg-contain bg-center bg-no-repeat h-48 w-48"
+              style="background-image: url({product.picture})"
+            />
+            <p class="text-center lowercase font-bold">{product.name}</p>
+            <Rating value={product.rating} />
+            <p class="text-center">${product.price}</p>
+          </div>
         </Prefetch>
-      </div>
+      </a>
     {/each}
   </div>
 </div>
