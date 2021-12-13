@@ -1,10 +1,8 @@
 {
   "scripts": {
-    "layer0": "layer0",
+    "layer0:deploy": "layer0 deploy",
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
-    "layer0:deploy": "layer0 deploy layer0-docs",
-    "deploy": "layer0 deploy",
     "dev": "sapper dev",
     "prebuild": "node ./prebuild.js",
     "build": "sapper build",
