@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "layer0 deploy",
+    "layer0:deploy": "layer0 deploy",
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
     "dev": "sapper dev",
