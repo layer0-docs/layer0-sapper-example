@@ -25,7 +25,7 @@
     "@babel/runtime": "^7.0.0",
     "@layer0/cli": "^4.8.0",
     "@layer0/core": "^4.8.0",
-    "@layer0/devtools": "^4.8.0",
+    "@layer0/devtools": "^3.17.8",
     "@layer0/prefetch": "^4.8.0",
     "@layer0/sapper": "^4.8.0",
     "@layer0/svelte": "^4.8.0",
