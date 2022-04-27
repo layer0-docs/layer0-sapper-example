@@ -26,7 +26,7 @@
     "@layer0/cli": "^4.8.0",
     "@layer0/core": "^4.8.0",
     "@layer0/devtools": "^4.8.0",
-    "@layer0/prefetch": "^4.8.0",
+    "@layer0/prefetch": "^3.17.10",
     "@layer0/sapper": "^4.8.0",
     "@layer0/svelte": "^4.8.0",
     "autoprefixer": "^10.0.2",
